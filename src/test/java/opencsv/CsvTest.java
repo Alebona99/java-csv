@@ -107,6 +107,26 @@ class CsvTest {
         });
     }
 
+
+    /**
+     * Test case 6
+     * Inserisco uno spazio
+     * Mi aspetto un eccezione
+     * @throws Exception FileNotFoundException
+     */
+    @Test
+    void read_space() throws Exception{
+        assertThrows(FileNotFoundException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                Csv csv = new Csv(" ");
+                csv.read();
+            }
+        });
+    }
+
+
+
     /**
      * Test case get 1
      * Se il get prende effettivamente 2 valori diversi
@@ -193,7 +213,7 @@ class CsvTest {
 
 
     /**
-     * Test case 7
+     * Test case get 7
      * Inserisco null
      * Mi aspetto un eccezione
      * @throws Exception NullPointerException
@@ -205,6 +225,24 @@ class CsvTest {
             public void execute() throws Throwable {
                 Csv csv = new Csv(null);
                 csv.get(4);
+            }
+        });
+    }
+
+
+    /**
+     * Test case get 8
+     * Inserisco uno spazio
+     * Mi aspetto un eccezione
+     * @throws Exception FileNotFoundException
+     */
+    @Test
+    void get_space() throws Exception{
+        assertThrows(FileNotFoundException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                Csv csv = new Csv(" ");
+                csv.get(5);
             }
         });
     }
@@ -283,6 +321,18 @@ class CsvTest {
 
     }
 
+
+    /**
+     * Test case isCsv 6
+     * Inserisco uno spazio
+     * Mi aspetto false
+     */
+    @Test
+    void isCsv_space(){
+        Csv csv = new Csv(" ");
+        assertFalse(csv.isCSV());
+    }
+
     /**
      * Test case isEmpty 1
      * Inserisco un file con degli elementi
@@ -352,6 +402,18 @@ class CsvTest {
                 csv.isEmpty();
             }
         });
+    }
+
+
+    /**
+     * Test case isEmpty 6
+     * Inserisco uno spazio
+     * Mi aspetto false
+     */
+    @Test
+    void isEmpty_space(){
+        Csv csv = new Csv(" ");
+        assertFalse(csv.isEmpty());
     }
 
 }
