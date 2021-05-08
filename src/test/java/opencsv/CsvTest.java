@@ -249,6 +249,41 @@ class CsvTest {
 
 
     /**
+     * Test case get 9
+     * Cerco il valore all'indice 0
+     * Mi aspetto un eccezione
+     * @throws Exception IndexOutOfBoundsException
+     */
+    @Test
+    void get_index_zero()throws Exception{
+        assertThrows(IndexOutOfBoundsException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                Csv csv = new Csv("/home/alessio/Downloads/biostats.csv");
+                csv.get(0);
+            }
+        });
+    }
+
+
+    /**
+     * Test case get 10
+     * Cerco il valore all'indice -1
+     * Mi aspetto un eccezione
+     * @throws Exception IndexOutOfBoundException
+     */
+    @Test
+    void get_index_negative() throws Exception{
+        assertThrows(IndexOutOfBoundsException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                Csv csv = new Csv("/home/alessio/Downloads/biostats.csv");
+                csv.get(-1);
+            }
+        });
+    }
+
+    /**
      * Test case isCsv 1
      * Inserisco un file csv
      * Mi aspetto che il risultato sia True
