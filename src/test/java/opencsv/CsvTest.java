@@ -7,16 +7,18 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 import java.io.FileNotFoundException;
 import java.util.NoSuchElementException;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test suite per la classe Csv
+ */
 class CsvTest {
 
     private Csv csv = new Csv("/home/alessio/Downloads/biostats.csv");
 
 
     /**
-     * Test Case READ 1
+     * Test Case read 1
      * Immetto un file non esistente, mi aspetto un eccezione
      * @throws Exception FileNotFoundException
      */
@@ -33,7 +35,7 @@ class CsvTest {
     }
 
     /**
-     * Test case READ 2
+     * Test case read 2
      * Immetto un file che non sia un .csv
      * Mi aspetto una NullPointerException
      * @throws Exception NullPointerException
@@ -53,7 +55,7 @@ class CsvTest {
 
 
     /**
-     * Test case READ 3
+     * Test case read 3
      * Immetto un file .csv vuoto
      * Mi aspetto una NoSuchElementException
      * @throws Exception NoSuchElementException
@@ -71,7 +73,42 @@ class CsvTest {
 
 
     /**
-     * Test case GET 1
+     * Test case read 4
+     * Non inserisco nessun file
+     * Mi aspetto un eccezione
+     * @throws Exception NullPointerException
+     */
+    @Test
+    void read_nothing() throws Exception{
+        assertThrows(NullPointerException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                Csv csv = new Csv();
+                csv.read();
+            }
+        });
+    }
+
+
+    /**
+     * Test case read 5
+     * Inserisco null
+     * Mi aspetto un eccezione
+     * @throws Exception NullPointerException
+     */
+    @Test
+    void read_null() throws Exception{
+        assertThrows(NullPointerException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                Csv csv = new Csv(null);
+                csv.read();
+            }
+        });
+    }
+
+    /**
+     * Test case get 1
      * Se il get prende effettivamente 2 valori diversi
      * @throws Exception
      */
@@ -84,7 +121,7 @@ class CsvTest {
 
 
     /**
-     * Test case GET 2
+     * Test case get 2
      * Immetto un file non esistente
      * Mi aspetto un eccezione
      * @throws Exception FileNotFoundException
@@ -102,7 +139,7 @@ class CsvTest {
 
 
     /**
-     * Test case GET 3
+     * Test case get 3
      * Immetto un file con formato diverso da .csv
      * Mi aspetto un eccezione
      * @throws Exception NullPointerException
@@ -120,7 +157,7 @@ class CsvTest {
 
 
     /**
-     * Test case Get 4
+     * Test case get 4
      * Immetto un file csv vuoto
      * Mi aspetto un eccezione
      * @throws Exception NoSuchElementException
@@ -131,6 +168,42 @@ class CsvTest {
             @Override
             public void execute() throws Throwable {
                 Csv csv = new Csv("/home/alessio/Downloads/empty.csv");
+                csv.get(4);
+            }
+        });
+    }
+
+
+    /**
+     * Test case get 6
+     * Non inserisco nessun valore
+     * Mi aspetto un eccezione
+     * @throws Exception NullPointerException
+     */
+    @Test
+    void get_nothing() throws Exception{
+        assertThrows(NullPointerException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                Csv csv = new Csv();
+                csv.get(3);
+            }
+        });
+    }
+
+
+    /**
+     * Test case 7
+     * Inserisco null
+     * Mi aspetto un eccezione
+     * @throws Exception NullPointerException
+     */
+    @Test
+    void get_null() throws Exception{
+        assertThrows(NullPointerException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                Csv csv = new Csv(null);
                 csv.get(4);
             }
         });
@@ -235,7 +308,7 @@ class CsvTest {
 
 
     /**
-     * Test case 3 isEmpty
+     * Test case isEmpty 3
      * Inserisco un file inesistente
      * Mi aspetto false
      */
@@ -247,7 +320,7 @@ class CsvTest {
 
 
     /**
-     * Test case 4 isEmpty
+     * Test case isEmpty 4
      * Non inserisco niente
      * Mi aspetto un eccezione
      * @throws Exception NullPointerException
@@ -265,8 +338,10 @@ class CsvTest {
 
 
     /**
-     * Test case 5 isEmpty
-     * @throws Exception
+     * Test case isEmpty 5
+     * Inserisco null
+     * Mi aspetto un eccezione
+     * @throws Exception NullPointerException
      */
     @Test
     void isEmpty_null() throws Exception{
