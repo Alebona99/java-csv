@@ -18,7 +18,9 @@ Ho scelto di usare OpenCsv invece che Apache Commons Csv per la flessibilità e 
 Ho bocciato l'idea di usare il metodo readAll(); della libreria OpenCsv per la lettura del file, poichè questo metodo carica in memoria l'intero file per poi leggerlo, quindi nel caso di un file grande si andrebbe ad occupare in maniera considerevole la memoria. Per questo motivo ho preferito usare il metodo readNext(); della libreria OpenCsv che legge e carica 1 riga alla volta in memoria e infine nell'ArrayList, in questo modo non si va a creare una copia del file csv in memoria.
 
 I metodi sono stati sviluppati con ArrayList poichè memorizza solo il valore dell'elemento (quindi meno memoria usata), mantiene sempre l'ordine di inserimento (che è fondamentale se si lavora con i big data di un DB).
-A differenza di un HashMap possiamo avere un qualsiasi numero di elementi null nell'ArrayList, inoltre non in un HashMap non è garantito l'ordine degli elementi inseriti.
+A differenza di un HashMap possiamo avere un qualsiasi numero di elementi null nell'ArrayList, inoltre in un HashMap non è garantito l'ordine degli elementi inseriti.
 
 Con i metodi isCsv(), isEmpty() e al metodo isFile() dell'oggetto File, nei metodi read() e get(), saranno accettati e non si andrà in contro ad eccezioni, solo con file il cui formato è csv e che non sia vuoto.
+
+E' stata sviluppata una Test Suite per i vari metodi della classe CSV.
 
