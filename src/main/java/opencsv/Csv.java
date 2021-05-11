@@ -1,7 +1,6 @@
 package opencsv;
 
 import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvValidationException;
 import org.apache.commons.io.FilenameUtils;
 
 import java.io.*;
