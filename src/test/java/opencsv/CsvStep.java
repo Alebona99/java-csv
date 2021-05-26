@@ -12,9 +12,12 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Test suite per la classe Csv
  */
-class CsvTest {
+class CsvStep {
 
     private Csv csv = new Csv("/home/alessio/Downloads/biostats.csv");
+
+    CsvStep() throws Exception {
+    }
 
 
     /**
@@ -289,7 +292,7 @@ class CsvTest {
      * Mi aspetto che il risultato sia True
      */
     @Test
-    void isCSV(){
+    void isCSV() throws Exception{
         Csv csv = new Csv();
         csv.setFile("/home/alessio/Downloads/biostats.csv");
         assertTrue(csv.isCSV());
@@ -302,7 +305,7 @@ class CsvTest {
      * Mi aspetto che il risultato sia false
      */
     @Test
-    void isCsv_not(){
+    void isCsv_not() throws Exception{
         Csv csv = new Csv("/home/alessio/Downloads/sur.css");
         assertFalse(csv.isCSV());
     }
@@ -314,7 +317,7 @@ class CsvTest {
      * Mi aspetto un false
      */
     @Test
-    void isCsv_not_exist_file(){
+    void isCsv_not_exist_file() throws Exception{
         Csv csv = new Csv("/home/alessio/Downloads/france.csv");
         assertFalse(csv.isCSV());
     }
@@ -363,7 +366,7 @@ class CsvTest {
      * Mi aspetto false
      */
     @Test
-    void isCsv_space(){
+    void isCsv_space() throws Exception{
         Csv csv = new Csv(" ");
         assertFalse(csv.isCSV());
     }
@@ -374,7 +377,7 @@ class CsvTest {
      * Mi aspetto false
      */
     @Test
-    void isEmpty_not(){
+    void isEmpty_not() throws Exception{
         Csv csv = new Csv("/home/alessio/Downloads/biostats.csv");
         assertFalse(csv.isEmpty());
     }
@@ -386,7 +389,7 @@ class CsvTest {
      * Mi aspetto true
      */
     @Test
-    void isEmpty(){
+    void isEmpty() throws Exception{
         Csv csv = new Csv("/home/alessio/Downloads/empty.csv");
         assertTrue(csv.isEmpty());
     }
@@ -398,7 +401,7 @@ class CsvTest {
      * Mi aspetto false
      */
     @Test
-    void isEmpty_not_exist_file(){
+    void isEmpty_not_exist_file() throws Exception{
         Csv csv = new Csv("/home/alessio/Downloads/bingo.yml");
         assertFalse(csv.isEmpty());
     }
@@ -446,7 +449,7 @@ class CsvTest {
      * Mi aspetto false
      */
     @Test
-    void isEmpty_space(){
+    void isEmpty_space() throws Exception{
         Csv csv = new Csv(" ");
         assertFalse(csv.isEmpty());
     }

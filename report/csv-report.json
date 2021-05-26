@@ -1,0 +1,983 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-05-26T14:26:51.885Z",
+        "line": 14,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2660963,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5927712,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "insert file CSV \"/home/alessio/Downloads/biostats.csv\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home/alessio/Downloads/biostats.csv\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 176055521,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "convert the file and see content with first method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithFirstMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.151Z",
+        "line": 15,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 175428,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.FileEmptyException: File empty\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"/home/alessio/Downloads/empty.csv\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:7)\nCaused by: customexception.FileEmptyException: File empty\n\tat opencsv.Csv.setFile(Csv.java:142)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 2639666,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "insert file CSV \"/home/alessio/Downloads/empty.csv\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home/alessio/Downloads/empty.csv\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 273034,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "convert the file and see content with first method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithFirstMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.176Z",
+        "line": 16,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 225837,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"/home/alessio/Downloads/sur.css\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:7)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 1743246,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "insert file CSV \"/home/alessio/Downloads/sur.css\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home/alessio/Downloads/sur.css\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 217056,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "convert the file and see content with first method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithFirstMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.195Z",
+        "line": 17,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 249420,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"/home/alessio/Downloads/surprise.text\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:7)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 513583,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "insert file CSV \"/home/alessio/Downloads/surprise.text\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home/alessio/Downloads/surprise.text\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 231895,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "convert the file and see content with first method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithFirstMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.208Z",
+        "line": 18,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 131669,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"/home/alessio/Downloads/\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:7)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 437598,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "insert file CSV \"/home/alessio/Downloads/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home/alessio/Downloads/\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 112089,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "convert the file and see content with first method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithFirstMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.219Z",
+        "line": 19,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 764165,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"null\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:7)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 589497,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "insert file CSV \"null\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 143590,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "convert the file and see content with first method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithFirstMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.233Z",
+        "line": 20,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 184750,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"home\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:7)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 260323,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "insert file CSV \"home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"home\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 125748,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "convert the file and see content with first method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithFirstMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.242Z",
+        "line": 21,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 162410,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"1234\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:7)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 457513,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "insert file CSV \"1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 112420,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "convert the file and see content with first method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithFirstMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.252Z",
+        "line": 22,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 150464,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"home23\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:7)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 369677,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "insert file CSV \"home23\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"home23\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 137585,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "convert the file and see content with first method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithFirstMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.261Z",
+        "line": 34,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 221547,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 258129,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "insert file CSV \"/home/alessio/Downloads/biostats.csv\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home/alessio/Downloads/biostats.csv\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 89714558,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "convert the file and see content with second method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithSecondMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.356Z",
+        "line": 35,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 94184,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.FileEmptyException: File empty\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"/home/alessio/Downloads/empty.csv\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:27)\nCaused by: customexception.FileEmptyException: File empty\n\tat opencsv.Csv.setFile(Csv.java:142)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 258665,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "insert file CSV \"/home/alessio/Downloads/empty.csv\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home/alessio/Downloads/empty.csv\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 115561,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "convert the file and see content with second method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithSecondMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.362Z",
+        "line": 36,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 145335,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"/home/alessio/Downloads/sur.css\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:27)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 400178,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "insert file CSV \"/home/alessio/Downloads/sur.css\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home/alessio/Downloads/sur.css\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 113333,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "convert the file and see content with second method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithSecondMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.371Z",
+        "line": 37,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 149466,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"/home/alessio/Downloads/surprise.text\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:27)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 369032,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "insert file CSV \"/home/alessio/Downloads/surprise.text\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home/alessio/Downloads/surprise.text\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 122353,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "convert the file and see content with second method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithSecondMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.378Z",
+        "line": 38,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 163105,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"/home/alessio/Downloads/\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:27)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 348204,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "insert file CSV \"/home/alessio/Downloads/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home/alessio/Downloads/\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 109029,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "convert the file and see content with second method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithSecondMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.385Z",
+        "line": 39,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 157361,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"null\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:27)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 369539,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "insert file CSV \"null\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 169877,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "convert the file and see content with second method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithSecondMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.393Z",
+        "line": 40,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 679611,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"home\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:27)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 690262,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "insert file CSV \"home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"home\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 142057,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "convert the file and see content with second method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithSecondMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.404Z",
+        "line": 41,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 180175,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"1234\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:27)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat jdk.internal.reflect.GeneratedMethodAccessor92.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 456529,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "insert file CSV \"1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 130030,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "convert the file and see content with second method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithSecondMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-26T14:26:52.412Z",
+        "line": 42,
+        "name": "file Csv to Json",
+        "description": "",
+        "id": "action-on-file-.csv;file-csv-to-json;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 140628,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user have file",
+            "match": {
+              "location": "com.csv.CsvStep.userHaveFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.opentest4j.AssertionFailedError: Unexpected exception thrown: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:54)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat ✽.insert file CSV \"home23\"(file:///home/alessio/IdeaProjects/java-csv/src/test/java/features/Csv.feature:27)\nCaused by: customexception.NotCsvException: File not found or not Csv (control your file)\n\tat opencsv.Csv.setFile(Csv.java:147)\n\tat com.csv.CsvStep$1.execute(CsvStep.java:26)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:50)\n\tat org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:37)\n\tat org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3060)\n\tat com.csv.CsvStep.userInsertFileCSV(CsvStep.java:23)\n\tat jdk.internal.reflect.GeneratedMethodAccessor92.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\n",
+              "duration": 346833,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "insert file CSV \"home23\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"home23\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.csv.CsvStep.userInsertFileCSV(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 108559,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "convert the file and see content with second method",
+            "match": {
+              "location": "com.csv.CsvStep.convertTheFileAndSeeContentWithSecondMethod()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Action on file .csv",
+    "description": "  A user have a file .csv, and\n  he want to convert in .json file",
+    "id": "action-on-file-.csv",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/Csv.feature",
+    "tags": []
+  }
+]
