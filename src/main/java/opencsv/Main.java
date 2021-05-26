@@ -8,11 +8,9 @@ public class Main {
         Csv csv = new Csv();
 
         csv.setFile("/home/alessio/Downloads/biostats.csv");
-        //csv.read().forEach(strings -> System.out.println(Arrays.toString(strings)));
-        //System.out.println(csv.get(3));
 
-        //csv.setFilename("/home/alessio/Downloads/sur.css");
-        //csv.read().forEach(strings -> System.out.println(Arrays.toString(strings)));
-        csv.get(0);
+        csv.toJsonPojo();
+        csv.toJson();
+
     }
 }

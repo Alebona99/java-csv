@@ -1,8 +1,16 @@
 package opencsv;
 
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.node.POJONode;
+import com.fasterxml.jackson.dataformat.csv.CsvMapper;
+import com.fasterxml.jackson.dataformat.csv.CsvParser;
+import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import com.opencsv.CSVReader;
+import com.opencsv.bean.CsvToBeanBuilder;
 import org.apache.commons.io.FilenameUtils;
+import org.w3c.dom.ls.LSOutput;
 
+import java.beans.Beans;
 import java.io.*;
 import java.util.*;
 
@@ -15,10 +23,6 @@ public class Csv {
 
     private File file;
 
-
-    /**
-     * Costruttore di Default
-     */
     public Csv(){ }
 
     /**
@@ -91,6 +95,31 @@ public class Csv {
                 throw new NullPointerException();
             }
         }
+    }
+
+
+
+    public void toJsonPojo() throws Exception{
+        File output = new File("prova.json");
+        List <Prova> prova = new CsvToBeanBuilder<Prova>(new FileReader(file)).withType(Prova.class).withSkipLines(1).withIgnoreLeadingWhiteSpace(true).build().parse();
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writerWithDefaultPrettyPrinter().writeValue(System.out, prova);
+        mapper.writerWithDefaultPrettyPrinter().writeValue(output, prova);
+    }
+
+
+    public void toJson() throws Exception{
+        File output = new File("output.json");
+        CsvSchema csvSchema = CsvSchema.builder().setUseHeader(true).build();
+        CsvMapper csvMapper = new CsvMapper();
+
+        List<Object> readAll = csvMapper.readerFor(Map.class).with(csvSchema).readValues(file).readAll();
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        mapper.writerWithDefaultPrettyPrinter().writeValue(output, readAll);
+
+        System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(readAll));
     }
 
 
