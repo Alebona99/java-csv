@@ -81,7 +81,6 @@ public class Csv {
         File output = new File("prova.json");
         List <Prova> prova = new CsvToBeanBuilder<Prova>(new FileReader(file)).withType(Prova.class).withSkipLines(1).withIgnoreLeadingWhiteSpace(true).build().parse();
         ObjectMapper mapper = new ObjectMapper();
-        //mapper.writerWithDefaultPrettyPrinter().writeValue(System.out, prova);     //Commented for Cucumber
         mapper.writerWithDefaultPrettyPrinter().writeValue(output, prova);
     }
 
@@ -99,7 +98,6 @@ public class Csv {
         List<Object> readAll = csvMapper.readerFor(Map.class).with(csvSchema).readValues(file).readAll();
         ObjectMapper mapper = new ObjectMapper();
         mapper.writerWithDefaultPrettyPrinter().writeValue(output, readAll);
-        //mapper.writerWithDefaultPrettyPrinter().writeValue(System.out, readAll);   //Commented for Cucumber
     }
 
 
